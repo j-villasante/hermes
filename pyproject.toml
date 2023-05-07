@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "hermes"
+version = "0.1.0"
+description = "A project containing many Jypiter file from diverse set of calculations and tests"
+authors = ["Josue Villasante <josue.villasante@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+ipython = "^8.13.2"
+ipykernel = "^6.22.0"
+
+
+[tool.poetry.group.quantum.dependencies]
+qiskit = {extras = ["visualization"], version = "^0.43.0"}
+
+
+[tool.poetry.group.calculation.dependencies]
+sympy = "^1.11.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
