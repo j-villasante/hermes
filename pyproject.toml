@@ -15,6 +15,8 @@ numpy = "1.23"
 
 [tool.poetry.group.quantum.dependencies]
 qiskit = {extras = ["visualization"], version = "^0.43.0"}
+qiskit-experiments = "^0.5.2"
+qiskit-ibm-runtime = "^0.10.0"
 
 
 [tool.poetry.group.calculation.dependencies]
