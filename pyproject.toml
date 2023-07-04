@@ -22,6 +22,10 @@ qiskit = {extras = ["visualization"], version = "^0.43.1"}
 qiskit-experiments = "^0.5.2"
 qiskit-ibm-runtime = "^0.11.1"
 
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.3.0"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
