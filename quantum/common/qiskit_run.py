@@ -84,10 +84,10 @@ class ParametricExperiment:
         })
 
         with open(json_path, "w", encoding="utf8") as f:
-            dump(self.experiments, f)
+            dump(self.experiments, f, indent="\t")
     
     def add_job(self, job: Job):
         self.experiments[self.exp_index]["jobs"].append(job)
         with open(self.json_path, "w", encoding="utf8") as f:
-            dump(self.experiments, f)
+            dump(self.experiments, f, indent="\t")
         
