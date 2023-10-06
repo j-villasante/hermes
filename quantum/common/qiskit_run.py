@@ -28,7 +28,7 @@ class Job(TypedDict):
     result: dict[str, float]
 
 
-def create_density_matrix(jobs: list[Job]) -> DensityMatrix:
+def resolve_stokes(jobs: list[Job]) -> np.array:
     s = np.zeros((4, 4))
     s[0, 0] = 1
 
@@ -45,16 +45,20 @@ def create_density_matrix(jobs: list[Job]) -> DensityMatrix:
             # S(0,i) and S(i, 0) values
             s_0i = j["s"][0]
             if j["s"][0] == j["s"][1]:
-                if i % 2:
+                if i < 2:
                     s[0, s_0i] += val
                 else:
                     s[0, s_0i] -= val
 
-                if i < 2:
+                if i % 2 == 0:
                     s[s_0i, 0] += val
                 else:
                     s[s_0i, 0] -= val
+    
+    return s
 
+
+def create_density_matrix(s: np.array) -> DensityMatrix:
     dm = np.zeros((4, 4), dtype=np.complex128)
     p_map = ["I", "X", "Y", "Z"]
     for i in [0, 1, 2, 3]:
