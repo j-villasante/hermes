@@ -1,3 +1,6 @@
 {
 	"jupyter.notebookFileRoot": "${workspaceFolder}",
+	"[python]": {
+		"editor.defaultFormatter": "ms-python.python"
+	}
 }
