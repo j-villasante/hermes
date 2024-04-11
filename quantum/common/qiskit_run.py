@@ -12,7 +12,7 @@ def load_job_data(filename: str) -> None:
 
     service = QiskitRuntimeService()
     for e in exp:
-        if "id" in e:
+        if "id" in e and len(e["jobs"]) == 0:
             ibm_job = service.job(e["id"])
             for i in [1, 2, 3]:
                 for j in [1, 2, 3]:

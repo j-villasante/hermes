@@ -13,6 +13,8 @@ matplotlib = "^3.7.1"
 numpy = "1.23"
 scipy = "^1.11.2"
 setuptools = "^69.0.3"
+plotly = "^5.20.0"
+nbformat = "^5.10.4"
 
 
 [tool.poetry.group.calculation.dependencies]
