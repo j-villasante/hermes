@@ -4,6 +4,7 @@ version = "0.1.0"
 description = "A project containing many Jypiter file from diverse set of calculations and tests"
 authors = ["Josue Villasante <josue.villasante@gmail.com>"]
 readme = "README.md"
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "~3.11"
@@ -15,22 +16,19 @@ scipy = "^1.11.2"
 setuptools = "^69.0.3"
 plotly = "^5.20.0"
 nbformat = "^5.10.4"
+qutip = "^5.0.3.post1"
 
 
 [tool.poetry.group.calculation.dependencies]
 sympy = "^1.11.1"
 
 
-[tool.poetry.group.quantum.dependencies]
-qiskit-experiments = "*"
-qiskit-ibm-runtime = "*"
-qiskit = {extras = ["visualization"], version = "*"}
-qiskit-aer = "*"
-quantum-tomography = "*"
-
-
 [tool.poetry.group.dev.dependencies]
 black = {extras = ["jupyter"], version = "^23.9.1"}
+
+
+[tool.poetry.group.quantum.dependencies]
+qiskit = "^1.1.1"
 
 [build-system]
 requires = ["poetry-core"]
