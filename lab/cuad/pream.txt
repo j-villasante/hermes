@@ -1,0 +1,24 @@
+amplitud inicial
+
+1;8;ASC;RP;MSB;2500;"Math, DC coupling, 5.0E-1 V/div, 5.0E-3 s/div, 2500 points, Sample mode";Y;2.0E-5;0;-2.5E-2;"s";2.0E-2;0.0E0;0.0E0;"Volts"
+
+amplitud inicial ultimo punto
+
+1;8;ASC;RP;MSB;2500;"Math, DC coupling, 1.0E-1 V/div, 5.0E-3 s/div, 2500 points, Sample mode";Y;2.0E-5;0;-2.5E-2;"s";4.0E-3;0.0E0;0.0E0;"Volts"
+
+BYT_Nr <NR1>    byte width          1
+BIT_Nr <NR1>   bit width          8
+ENCdg     data encoding       ASC
+BN_Fmt    binary encoding          RP
+BYT_Or    byte order          MSB
+NR_Pt   number of points          2500
+WFID   waveform identifier   "Math, DC coupling, 5.0E-1 V/div, 5.0E-3 s/div, 2500 points, Sample mode"
+PT_FMT  format of curve points       Y
+XINcr  horizontal sampling interval      2.0E-5
+PT_Off trigger offset      0
+XZERo    time of first data point      -2.5E-2
+XUNit  horizontal units     "s"
+YMUlt <NR3>  vertical scale factor   2.0E-2
+YZEro <NR3>    waveform conversion factor      0.0E0
+YOFF <NR3>    vertical position       0.0E0
+YUNit <QString>    vertical units        "Volts"
